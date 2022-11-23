@@ -10,10 +10,11 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: database_name_test
+  database: budget_app
   pool: 5
-  username: postgres_user_name
-  password: postgres_password
+  host: localhost
+  username: postgres
+  password: josh5091
 
 staging:
   url: <%= ENV['DATABASE_URL'] %>
