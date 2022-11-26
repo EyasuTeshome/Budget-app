@@ -17,7 +17,7 @@ class ExpensesController < ApplicationController
 
   def destroy
     @expense = Expense.find(params[:id])
-    userize! :destroy, @expense
+    @expense.destroy
     flash[:notice] = if @expense.destroy
                        'Transaction removed successfully'
                      else
