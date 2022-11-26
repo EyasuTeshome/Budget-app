@@ -1,3 +1,4 @@
+# rubocop:disable all
 class Ability
   include CanCan::Ability
 
@@ -5,9 +6,9 @@ class Ability
     # Define abilities for the passed in user here. For example:
     #
     user ||= User.new # guest user (not logged in)
-      can :read, :all
-      can :destroy, Category do |category|
-        category.user == user
+    can :read, :all
+    can :destroy, Category do |category|
+      category.user == user
       can :destroy, Expense do |expense|
         expense.user == user
       end
