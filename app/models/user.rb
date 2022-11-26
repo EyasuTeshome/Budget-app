@@ -1,13 +1,19 @@
 class User < ApplicationRecord
-  has_many :expenses, foreign_key: :user_id, dependent: :destroy
-  has_many :categories, foreign_key: :user_id, dependent: :destroy
-
-  validates :name, presence: true, length: { in: 1..80 }
-  validates :email, presence: true, length: { in: 1..80 }, uniqueness: true
-  validates :password, presence: true, length: { in: 6..12 }
+  after_create :set_role
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  has_many :categories, dependent: :destroy, foreign_key: :user_id
+  has_many :expenses, dependent: :destroy, foreign_key: :user_id
+
+  validates :name, presence: true
+
+  private
+
+  def set_role
+    update(role: 'user')
+  end
 end

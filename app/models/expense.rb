@@ -1,8 +1,8 @@
 class Expense < ApplicationRecord
-  belongs_to :user
-  has_many :category_expenditures, foreign_key: :expenditure_id, dependent: :destroy
-  has_many :categories, through: :expense_categories, foreign_key: :expenditure_id
+  belongs_to :user, class_name: 'User'
+  has_many :expense_categories, dependent: :destroy
+  has_many :categories, through: :expense_categories, dependent: :destroy
 
-  validates :amount, presence: true, numericality: { greater_than: 0 }
-  validates :name, presence: true, length: { in: 1..80 }
+  validates :name, presence: true
+  validates :amount, numericality: { greater_than: 0, less_than: 1_000_000 }
 end
