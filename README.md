@@ -1,83 +1,168 @@
-# Ruby on Rails Course
+<a name="readme-top"></a>
 
-If you are not familiar with linters and GitHub Actions, read [root level README](../README.md).
+<div align="center">
 
-## Set-up GitHub Actions
+  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
 
-This GitHub Action is going to run [Rubocop](https://docs.rubocop.org/en/stable/) and [Stylelint](https://stylelint.io/) to help you find style issues.
+<h3><b>Microverse README Template</b></h3>
 
-[Stylelint](https://stylelint.io/) is a linter for your stylesheets that helps you avoid errors and enforce conventions.
+</div>
 
-[Rubocop](https://docs.rubocop.org/en/stable/) is a Ruby static code analyzer (a.k.a. linter) and code formatter. It will enforce many of the guidelines outlined in the community [Ruby Style Guide](https://rubystyle.guide/).
+<!-- PROJECT DESCRIPTION -->
 
-Please do the following **steps in this order**:
+# 📖 Budget-App <a name="about-project"></a>
 
-1. In the first commit of your feature branch create a `.github/workflows` folder and add a copy of [`.github/workflows/linters.yml`](.github/workflows/linters.yml) to that folder.
-    - **Remember** to use the file linked above
-    - **Remember** that `.github` folder starts with a dot.
-2. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
-    - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
-3. When you open your first pull request you should see the result of the GitHub Actions:
+> This rails budget app is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you > can see how much money you spent and on what.
 
-![gh actions checks](../assets/images/gh-actions-rubocop-stylelint-checks.png)
 
-Click on the `Details` link to see the full output and the errors that need to be fixed:
+## 🛠 Built With <a name="built-with"></a>
+### Tech Stack <a name="tech-stack"></a>
 
-![gh actions failing checks](../assets/images/gh-actions-rubocop-failing-checks.png)
+This project was built using.
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
+    <li><a href=https://www.w3schools.com/html/">HTML</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+  </ul>
+</details>
 
-## Set-up linters in your local env
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
+  </ul>
+</details>
 
-**Note**: The `npm` package manager is going to create a `node_modules` directory to install all of your dependencies. You shouldn't commit that directory. To avoid that, you can create a [`.gitignore`](https://git-scm.com/docs/gitignore) file and add `node_modules` to it:
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
 
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
+
+>  key features of the application.
+
+- **User can register and login**
+- **Authenticated User can manage categories**
+- **Authenticated User can manage expenses**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+> Under construction. Come back later
+
+- [Live Demo Link](https://my-expenses.herokuapp.com/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+In order to run this project you need:
+- Ruby installed
+- Postgresql installed
+- git installed [In case you want to clone this repo using your terminal]
+- Any IDE or text editor that supports Ruby
+### Setup
+
+Clone this repository to your desired folder:
+#### 1. Clone this repository or download the Zip folder:"
+
+```bash command
+$ git clone this repo
 ```
-# .gitignore
-node_modules/
+#### 2. Navigate to the location of the folder in your machine:
+```bash command
+you@your-Pc-name:~$ cd <folder>
+```
+#### 3. Press Enter to navigate to your local clone.
+#### 4. Install the gems:
+```bash command
+bundle install
+```
+#### 5. Create database and run the necessary migration files :
+```bash command
+$ bin/rails db:create
+$ rake db:migrate
+```
+#### 6 Finally you can run the server:
+```bash command
+rails s
 ```
 
-### Rubocop
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-1. Add this line to the `Gemfile`
-    ```
-    gem 'rubocop', '>= 1.0', '< 2.0'
-    ```
-    *not sure how to use Gemfile? Read [this](https://bundler.io/v1.15/guides/bundler_setup.html)*.
-2. Run `bundle install`.
-3. Copy [.rubocop.yml](./.rubocop.yml) to the root directory of your project
-4. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
-    - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
-5. Run `rubocop`.
-6. Fix linter errors.
-7. **IMPORTANT NOTE**: feel free to research [auto-correct options for Rubocop](https://rubocop.readthedocs.io/en/latest/auto_correct/) if you get a flood of errors but keep in mind that correcting style errors manually will help you to make a habit of writing a clean code!
+<!-- AUTHORS -->
 
-### Stylelint
+## 👥 Author <a name="author"></a>
 
-1. Run
+👤 Eyasu Teshome
 
-   ```
-   npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
-   ```
+- GitHub: [@EyasuTeshome](https://github.com/EyasuTeshome)
+- Twitter: [@EyasuTeshome](https://twitter.com/EyasuTeshome)
+- LinkedIn: [Eyasu Teshome](https://linkedin.com/in/eyasu-teshome)
 
-   *not sure how to use npm? Read [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).*
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-2. Copy [.stylelintrc.json](./.stylelintrc.json) to the root directory of your project.
-3. **Do not make any changes in config files - they represent style guidelines that you share with your tem - which is a group of all Microverse students.**
-   - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
-4. Run `npx stylelint "**/*.{css,scss}"` on the root of your directory of your project.
-5. Fix linter errors.
-6. **IMPORTANT NOTE**: feel free to research [auto-correct options for Stylelint](https://stylelint.io/user-guide/cli#autofixing-errors) if you get a flood of errors but keep in mind that correcting style errors manually will help you to make a habit of writing a clean code!
+<!-- FUTURE FEATURES -->
 
-## RSpec/Heroku Actions
+## 🔭 Future Features <a name="future-features"></a>
 
-Feel free to add your own deployment actions which can run your tests and deploy to Heroku.
+- [ ] **Deploy the budget application**
+- [ ] **Write tests**
+- [ ] **Implement API for this web application**
 
-Make sure that you do not modify the [`.github/workflows/linters.yml`](.github/workflows/linters.yml) but that you create a separe GitHub Action workflow file for that.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- [GitHub Actions with Ruby on Rails: Setting up Continuous Integration](https://gorails.com/episodes/github-actions-continuous-integration-ruby-on-rails)
-- [Deploying to Heroku from GitHub Actions](https://dev.to/heroku/deploying-to-heroku-from-github-actions-29ej)
-- [Building a Rails CI pipeline with GitHub Actions](https://boringrails.com/articles/building-a-rails-ci-pipeline-with-github-actions/)
-- [Github Actions to run Rubocop and RSpec tests on Rails with Postgres](https://dev.to/abdellani/github-actions-to-run-rubocop-and-rspec-tests-on-rails-with-postgres-47i)
+<!-- CONTRIBUTING -->
 
-## Troubleshooting
+## 🤝 Contributing <a name="contributing"></a>
 
-- If you are building an API only Rails application
-For API only Rails application you can remove the Stylelint config. To do so remove line no. [23](https://github.com/microverseinc/linters-config/blob/f0c812753d0418288c404ed4a441a2e7370e9f4e/ror/.github/workflows/linters.yml#L23) to [36](https://github.com/microverseinc/linters-config/blob/f0c812753d0418288c404ed4a441a2e7370e9f4e/ror/.github/workflows/linters.yml#L36) from the [linter.yml]((https://github.com/microverseinc/linters-config/blob/master/ror/.github/workflows/linters.yml)) file.
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+
+If you like this project, kindly drop a star.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+We would like to thank the Ruby community and Microverse team
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
