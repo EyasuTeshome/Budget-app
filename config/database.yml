@@ -21,4 +21,6 @@ staging:
 
 production:
   adapter: postgresql
+  database: budget_app_rj5r
+  username: budget_app
   url: <%= ENV['DATABASE_URL'] %>
