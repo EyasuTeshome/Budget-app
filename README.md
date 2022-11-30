@@ -58,9 +58,7 @@ This project was built using.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Under construction. Come back later
-
-- [Live Demo Link](https://budget-app-4dn3.onrender.com/)
+- [Live Demo Link](https://budget-app-.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
