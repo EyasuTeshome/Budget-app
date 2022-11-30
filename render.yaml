@@ -1,0 +1,18 @@
+databases:
+  - name: budget_app_rj5r
+    databaseName: budget_app_rj5r
+    user: budget_app
+
+services:
+  - type: web
+    name: budget_app_rj5r
+    env: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: https://dashboard.render.com/d/dpg-ce27b802i3mkuc8fmf50-a
+        fromDatabase:
+          name: budget_app
+          property: connectionString
+      - key: 7a9e2b67c44d7a0d293532f0b8c08233
+        sync: false

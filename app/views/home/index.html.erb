@@ -1,0 +1,21 @@
+<div class="home">
+    <% if !user_signed_in? %>
+
+    <div class="home-page">
+        <p>WELCOME HERE</p>
+        <div class="logo">
+        <%= image_tag("1.png") %>
+        <h1>My Expenses</h1>
+        </div>
+        <div class="d-grid fixed-bottom mb-5">
+            <%= link_to "LOG IN", new_user_session_path, class: 'btn main-bg m-4 login btn-primary '%>
+
+            <%= link_to "SIGN UP", new_user_registration_path, class: 'btn main-bg m-4 mt-1 signup btn-primary ' %>
+          </div>
+
+    </div>
+
+    <% else %>
+      <%= link_to 'Categories', categories_path, class: 'button is-primary is-small' %>
+    <% end %>
+</div>
